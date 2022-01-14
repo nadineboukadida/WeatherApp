@@ -1,0 +1,69 @@
+.container {
+    width: 100%;
+    height: max(12vh , 90px)  ; 
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* justify-content: center; */
+    /* padding-left: ; */
+    z-index: 9;
+}
+.profile-img {
+    width: 45%;
+    min-width: 70px;
+}
+.container-msg {
+    width: 50%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+.text {
+    /* width: 100%; */
+}
+.profile {
+    /* width: 70%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name {
+    white-space: nowrap;
+}
+.searchBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid black;
+    padding: 2px;
+    width: max(13vw , 100px);
+    font-size: max(1vw ,16px);
+}
+input:focus{
+    outline: none;
+}
+
+.search {
+    width: 2vw;
+    min-width: 20px;
+}
+
+
+
+
+@media screen and (max-width : 800px) {
+    .container-msg {
+    width: 100%;
+
+       justify-content: flex-start;}
+    
+}

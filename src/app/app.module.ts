@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SunsetSunriseComponent } from './components/sunset-sunrise/sunset-sunrise.component';
 import { SSinfoComponent } from './components/sunset-sunrise/ssinfo/ssinfo.component';
 import { WorldmapComponent } from './worldmap/worldmap.component';
+import { ListComponent } from './worldmap/list/list.component';
+import { CityItemComponent } from './worldmap/list/city-item/city-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,8 @@ import { WorldmapComponent } from './worldmap/worldmap.component';
     SunsetSunriseComponent,
     SSinfoComponent,
     WorldmapComponent,
+    ListComponent,
+    CityItemComponent,
   ],
   imports: [
     BrowserModule,

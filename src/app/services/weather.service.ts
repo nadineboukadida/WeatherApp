@@ -13,7 +13,8 @@ export class WeatherService {
   url = 'https://api.openweathermap.org/data/2.5/weather';
   url1 = 'https://api.openweathermap.org/data/2.5/onecall';
 
-  apiKey = 'c4cb8a06c0baf22eb8a4cf7b42eb6b7f';
+  apiKey = ''
+  // 'c4cb8a06c0baf22eb8a4cf7b42eb6b7f';
   constructor(private http: HttpClient) {}
   getMoreDatabyName(lat, lon) {
     let params = new HttpParams()

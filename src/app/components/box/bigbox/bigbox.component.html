@@ -6,16 +6,19 @@
         <h1>{{title}}</h1>
         <h3>{{subtitle}}</h3></div>
     </div>
-    <app-temp number="22°C" descrip="Partly Cloudy"></app-temp>
+    <app-temp [number]="showSmallbox ? weather.main.temp + '°C' : weather.wind.speed + 'm/s'" [descrip]="showSmallbox ? weather.weather[0].description : weather.wind.deg + ' deg'"></app-temp>
 <div *ngIf="showSmallbox" class="small-container">
-    <app-smallbox color="blue" title="pressure" value="55%"></app-smallbox>
-    <app-smallbox color="purple" title="Visibility" value="55%"></app-smallbox>
+    <app-smallbox color="blue" title="pressure" [value]="weather.main.pressure + ' hPa' "></app-smallbox>
+    <app-smallbox color="purple" title="Visibility" [value]="weather.visibility + ' m'"></app-smallbox>
 
-    <app-smallbox color="green" title="Humidity" value="55%"></app-smallbox>
+    <app-smallbox color="green" title="Humidity" [value]="weather.main.humidity + '%' "></app-smallbox>
 
 </div>
 <div *ngIf="!showSmallbox" class="slider">
-    <div class="line"></div>
+    <div class="line-wrapper">
+    <div class="line" [class]="class">
+    </div></div>
+    <div class="status" >{{this.status}}</div>
     <h5>Good</h5>
     <h5>Hazardous</h5>
 

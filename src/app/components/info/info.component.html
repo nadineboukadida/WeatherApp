@@ -1,8 +1,8 @@
 <div class="container">
     <div class="container1">
         <div class="GeneralInfos">
-         <app-bigbox [showSmallbox]= true pic="sunny" smallIcon="cloud" title="Weather" subtitle="What's the Weather Like ?"></app-bigbox>
-    <app-bigbox [showSmallbox]=false pic="windy" smallIcon="cloud" title="Air Quality" subtitle="Air Pollutan : "></app-bigbox>
+         <app-bigbox [weather]="weather" [showSmallbox]= true pic="sunny" smallIcon="cloud" title="Weather" subtitle="What's the Weather Like ?"></app-bigbox>
+    <app-bigbox  [weather]="weather" [showSmallbox]=false pic="windy" smallIcon="cloud" title="Air Quality" subtitle="Air Pollutan : "></app-bigbox>
     </div>
     <div class="TodayInfos">
     <app-large-box></app-large-box> 

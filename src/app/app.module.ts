@@ -17,7 +17,7 @@ import { SideinfosComponent } from './components/sideinfos/sideinfos.component';
 import { PredictionBarComponent } from './components/Prediction/prediction-bar/prediction-bar.component';
 import { PredictionElementComponent } from './components/Prediction/prediction-element/prediction-element.component';
 import { ChartDailyComponent } from './components/chart-daily/chart-daily.component';
-
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +38,8 @@ import { ChartDailyComponent } from './components/chart-daily/chart-daily.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

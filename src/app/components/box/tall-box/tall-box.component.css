@@ -1,0 +1,32 @@
+.container{
+    height: 35vh;
+    min-height: 200px;
+    min-width: 200px;
+    width: 15vw;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background-size: cover;
+  justify-self: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+}
+h5, h3 {
+    margin: 0;
+    font-size: max (0.4vw , 14px);
+}
+h3 {
+    font-size: max(1.5vw , 17px);
+    font-weight: 700;
+
+}
+app-temp {
+    margin: -1vw;
+}

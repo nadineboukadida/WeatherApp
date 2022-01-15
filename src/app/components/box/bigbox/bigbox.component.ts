@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BigboxComponent implements OnInit {
 @Input() pic : string ="";
 @Input() smallIcon : string = "cloud";
+@Input() title : string=""; 
+@Input() subtitle : string = "";
+@Input() showSmallbox: boolean;
+
   constructor() { }
 
   ngOnInit(): void {

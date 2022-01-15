@@ -1,0 +1,19 @@
+.container{
+    height: 35vh;
+    min-height: 190px;
+    min-width: 320px;
+    width: 35vw;
+    justify-self: flex-start;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 10px 1vw;
+  box-sizing: border-box;
+}
+.title {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: max(1vw , 22px);
+}
+div{
+    padding: 2px 0 0 0 ;
+}

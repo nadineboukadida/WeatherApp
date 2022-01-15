@@ -3,8 +3,21 @@
     <div class="firstLabel">
         <app-small-icons [pic]="smallIcon"></app-small-icons>
         <div class="text">
-        <h1>Weather</h1>
-        <h3>What's the Weather Like ?</h3></div>
+        <h1>{{title}}</h1>
+        <h3>{{subtitle}}</h3></div>
     </div>
+    <app-temp number="22°C" descrip="Partly Cloudy"></app-temp>
+<div *ngIf="showSmallbox" class="small-container">
+    <app-smallbox color="blue" title="pressure" value="55%"></app-smallbox>
+    <app-smallbox color="purple" title="Visibility" value="55%"></app-smallbox>
 
+    <app-smallbox color="green" title="Humidity" value="55%"></app-smallbox>
+
+</div>
+<div *ngIf="!showSmallbox" class="slider">
+    <div class="line"></div>
+    <h5>Good</h5>
+    <h5>Hazardous</h5>
+
+</div>
 </div>

@@ -1,0 +1,32 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1vw;
+    box-sizing: border-box;
+    z-index: 12;
+
+}
+.current {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    justify-content: center;
+}
+.number {
+    font-size: max(2.3vw , 27px);
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 7px;
+    width: 50%;
+}
+.text {
+    width: 100%;
+white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

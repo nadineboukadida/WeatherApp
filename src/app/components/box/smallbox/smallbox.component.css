@@ -1,0 +1,22 @@
+.container {
+    width: max(80px , 2vw);
+    height:max(60px , 2vw);
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 3px;
+    
+}
+.title {
+    font-size: max(0.6vw, 13px);
+
+}
+.value {
+    margin-top: 0.2vw;
+    font-weight: 700;
+    font-size: max(0.8vw, 14px);
+
+}

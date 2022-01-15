@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 status :string = "sunny";
+
+
   constructor() { }
 
   ngOnInit(): void {

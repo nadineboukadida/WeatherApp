@@ -1,0 +1,37 @@
+.container {
+  background-color: rgba(155, 192, 223, 0.301);
+  width: 80%;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5vw;
+  margin: 0.5vw 0;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.number {
+  font-size: max(1.7vw, 23px);
+  font-weight: 700;
+  color: rgb(235, 162, 128);
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 7px;
+  width: 50%;
+}
+.weather {
+  font-size: max(1.2vw, 18px);
+  font-weight: 700;
+}
+.date {
+  font-size: max(0.9vw, 15px);
+  font-weight: 100;
+  color: gray;
+}
+.text {
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

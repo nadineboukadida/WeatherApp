@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChartComponent } from './components/chart/chart.component';
+// import { ChartComponent } from './components/chart/chart.component';
 import { InfoComponent } from './components/info/info.component';
 
-const routes: Routes = [{ path: 'chart', component: ChartComponent },
+const routes: Routes = [
 { path: 'info', component: InfoComponent }];
 
 @NgModule({

@@ -1,0 +1,20 @@
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    flex-direction: column;
+    background-color: rgba(247, 247, 247, 0.603);
+}
+
+app-prediction-element {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    font-size: max(2vw , 25px);
+}

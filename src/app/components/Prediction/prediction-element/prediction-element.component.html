@@ -1,8 +1,8 @@
 <div class="container">
-    <img src="assets/icons/{{item.weather}}.svg" alt="">
+    <img src="assets/icons/{{img}}" alt="">
 
     <div class="text">
-    <div class="date">{{item.date}}</div>
-    <div class="weather">{{item.weather}}</div> </div>
-    <div class="number">{{item.number}}°C</div>
+    <div class="date">{{date}}</div>
+    <div class="weather">{{item.weather[0].description}}</div> </div>
+    <div class="number"><div>{{min}}°C</div> <div>{{max}}°C</div>  </div>
 </div>

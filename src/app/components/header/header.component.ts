@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 search  : string =""
-  constructor() { }
+name=""
+  constructor(private weatherService : WeatherService) { }
 
   ngOnInit(): void {
+    if(this.weatherService.weather)
+      alert(this.weatherService.weather)
   }
    
   onKey(event:any) {
    this.search=event.target.value;
   }
+  
 }

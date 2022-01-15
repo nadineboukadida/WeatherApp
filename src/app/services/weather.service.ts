@@ -1,27 +1,45 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherService {
-  name : any ;
-  private subject = new Subject <any> ()
-  url = 'https://api.openweathermap.org/data/2.5/weather/';
-  apiKey = 'bd659a828032f2c5c4a8c1321310e390';
+  weather: any;
+  name: string = '';
+  moredata: any;
+  private subject = new Subject<any>();
+  url = 'https://api.openweathermap.org/data/2.5/weather';
+  url1 = 'https://api.openweathermap.org/data/2.5/onecall';
+
+  apiKey = 'c4cb8a06c0baf22eb8a4cf7b42eb6b7f';
   constructor(private http: HttpClient) {}
-
-  getWeatherDatabyName(name) {
-    this.name=name;
-    this.subject.next(this.name);
+  getMoreDatabyName(lat, lon) {
     let params = new HttpParams()
-    .set('q', name).set('units','metric').set('appid' , this.apiKey);
- 
-    return this.http.get(this.url ,  { params });
+      .set('lat', lat)
+      .set('lon', lon)
+      .set('units', 'metric')
+      .set('exclude', 'current,alerts,minutely')
+      .set('appid', this.apiKey);
+    return this.http.get(this.url1, { params });
   }
-  onChange():Observable<any> {
-    return this.subject.asObservable();
-  }
+  getWeatherDatabyName(name) {
+    this.name = name;
+    let params = new HttpParams()
+      .set('q', name)
+      .set('units', 'metric')
+      .set('appid', this.apiKey);
 
+    return this.http.get(this.url, { params });
+  }
+  getWeatherDatabylatlon(lat, lon) {
+    let params = new HttpParams()
+      .set('lat', lat)
+      .set('lon', lon)
+      .set('units', 'metric')
+      .set('appid', this.apiKey);
+
+    return this.http.get(this.url, { params });
+  }
 }

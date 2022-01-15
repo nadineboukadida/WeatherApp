@@ -12,12 +12,17 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .number {
-  font-size: max(1.7vw, 23px);
+  font-size: max(1vw, 15px);
   font-weight: 700;
   color: rgb(235, 162, 128);
   font-family: "Montserrat", sans-serif;
   margin-bottom: 7px;
-  width: 50%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
 }
 .weather {
   font-size: max(1.2vw, 18px);

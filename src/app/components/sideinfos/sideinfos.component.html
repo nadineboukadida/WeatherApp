@@ -1,8 +1,9 @@
-<div class="container">
-    <div class="current">
-        <div class="text">
-        <div class="weather">Sunny</div>
-        <div class="place">This right, Place</div></div>
-    <div class="number">22°C</div>
+<div [ngStyle]="{opacity: show ? 1 : 0}" class="container">
+  <div class="current">
+    <div class="text">
+      <div class="weather">{{this.weather.weather[0].description}}</div>
+      <div class="place">{{this.weather.name}} , {{this.weather.sys.country}}</div>
     </div>
+    <div class="number">{{this.weather.main.temp }}°C</div>
+  </div>
 </div>

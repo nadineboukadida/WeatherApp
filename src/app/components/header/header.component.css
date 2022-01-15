@@ -58,11 +58,6 @@ input:focus{
     min-width: 20px;
 }
 
-.currentWeather {
-    width: 50%;
-    background-color: rgba(255, 231, 196, 0.651);
-    border-radius: 20px;
-}
 
 
 @media screen and (max-width : 800px) {

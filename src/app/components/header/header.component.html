@@ -1,19 +1,19 @@
 <div class="container">
-    <div class="container-msg">
+  <div class="container-msg">
     <div class="profile">
-        <img class="profile-img" src="assets/svg/profil.svg" alt="">
-    </div> 
+      <img class="profile-img" src="assets/svg/profil.svg" alt="">
+    </div>
     <div class="text">
-       <div class="message">Hello , </div>
-       <div class="name">Nadine Boukadida!</div>
-</div>
-</div>
-<div class="searchBar">
+      <div class="message">Hello , </div>
+      <div class="name">Nadine Boukadida!</div>
+    </div>
+  </div>
+  <div class="searchBar">
     <img class="search" src="assets/svg/search.svg" alt="">
     <input type="text" (keyup)="onKey($event)">
 
-</div>
-<div class="currentWeather">
-    <app-sideinfos></app-sideinfos>
-</div>
+  </div>
+  <div class="currentWeather">
+    <app-sideinfos [show]=false></app-sideinfos>
+  </div>
 </div>

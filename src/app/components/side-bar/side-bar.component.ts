@@ -9,7 +9,9 @@ export class SideBarComponent implements OnInit {
  menu : string = "menu";
  locate : string = "locate";
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }

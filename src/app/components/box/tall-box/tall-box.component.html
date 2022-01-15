@@ -1,7 +1,8 @@
 <div class="container" [ngStyle]="{'background-image': 'url(assets/status/' + pic + '.jpg)'}">
-<div class="text">
+  <div class="text">
     <h5>Tomorrow</h5>
-    <h3>Place Name</h3>
-</div>
-    <app-temp number="22°C" descrip="Partly Cloudy"></app-temp>
+    <h3>
+      {{weather.name}} , {{weather.sys.country}}</h3>
+  </div>
+  <app-temp [number]="tomorrow[0].temp.day + '°C'" [descrip]="tomorrow[0].weather[0].description"></app-temp>
 </div>

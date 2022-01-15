@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-bigbox',
@@ -14,33 +15,31 @@ export class BigboxComponent implements OnInit {
   @Input() weather: any;
   speed: number;
   status: string;
-class:string
-  constructor() {}
+  class: string;
+  @Input() img : string ;
+  code : string;
+  constructor(private weatherService : WeatherService) {}
 
   ngOnInit(): void {
+  
+
     this.speed = this.weather.wind.speed * 2.23694;
-    console.log(this.speed)
 
     if (this.speed < 10) {
-      this.status="Gentle Breeze"
-      this.class="status1"
+      this.status = 'Gentle Breeze';
+      this.class = 'status1';
+    } else if (this.speed < 24) {
+      this.status = 'Fresh Breeze';
+      this.class = 'status2';
+    } else if (this.speed < 31) {
+      this.status = 'Strong Breeze';
+      this.class = 'status3';
+    } else if (this.speed < 54) {
+      this.status = 'Strong Gale';
+      this.class = 'status4';
+    } else {
+      this.status = 'Storm Force';
+      this.class = 'status5';
+    }
   }
-  else if (this.speed <24 ) {
-    this.status="Fresh Breeze"
-    this.class="status2"
-
-  }
-  else if (this.speed <31 ) {
-    this.status="Strong Breeze"
-    this.class="status3"
-
-  } 
-  else if (this.speed <54 ) {
-    this.status="Strong Gale"
-    this.class="status4"
-
-  }
-  else {this.status="Storm Force"
-  this.class="status5"
-  }
-}}
+}

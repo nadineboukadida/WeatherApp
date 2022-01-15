@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InfoComponent } from './components/info/info.component';
@@ -17,7 +17,10 @@ import { SideinfosComponent } from './components/sideinfos/sideinfos.component';
 import { PredictionBarComponent } from './components/Prediction/prediction-bar/prediction-bar.component';
 import { PredictionElementComponent } from './components/Prediction/prediction-element/prediction-element.component';
 import { ChartDailyComponent } from './components/chart-daily/chart-daily.component';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { SunsetSunriseComponent } from './components/sunset-sunrise/sunset-sunrise.component';
+import { SSinfoComponent } from './components/sunset-sunrise/ssinfo/ssinfo.component';
+import { WorldmapComponent } from './worldmap/worldmap.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,14 +37,20 @@ import {HttpClientModule} from '@angular/common/http'
     SideinfosComponent,
     PredictionBarComponent,
     PredictionElementComponent,
-    ChartDailyComponent
+    ChartDailyComponent,
+    SunsetSunriseComponent,
+    SSinfoComponent,
+    WorldmapComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAGbE7ZeIXwxPqPYYKd8g8vL-ocz9OqtY8',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

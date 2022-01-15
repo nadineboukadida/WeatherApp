@@ -1,0 +1,7 @@
+<div class="container" [ngClass]="{blue: !sunrise}">
+    <div class="sun" [ngClass]="sunrise ? 'sunrise' : 'sunset'">
+        <img src="assets/sun/sunny.svg" alt="">
+    </div>
+    <div class="title">{{sunrise? "Sunrise" : "Sunset"}}</div>
+    <div class="time">{{time}}</div>
+</div>

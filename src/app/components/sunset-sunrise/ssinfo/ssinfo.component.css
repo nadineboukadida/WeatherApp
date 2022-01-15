@@ -1,0 +1,55 @@
+.container {
+    width: 100%;
+    min-width: 100px;
+    height: max(90px , 10vh);
+     display: flex;
+    padding: 0 10px;
+border-radius: 20px;
+     align-items: center;
+     justify-content: center;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     position: relative;
+     overflow: hidden;
+     background-color: #9ee5d9c5;
+    flex-direction: column;
+
+}
+.blue {
+    background-color: #0413349c;
+    color: white;
+}
+
+.sun.sunrise {
+    top: 5%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: sunrise 5s infinite ease-in;
+}
+.sun.sunset {
+    top: 5%;
+    position: absolute;
+    width: 100%;
+    transform: rotate(0deg) translateX(-50px) ;
+
+    height: 100%;
+    animation: sunset 5s 3.5s infinite ;
+}
+@keyframes sunrise {
+    0% {
+transform: rotate(-50deg) translateX(-50px) ;
+    }
+    100% {
+        transform: rotate(20deg) translateX(200px) ;
+
+    }
+}
+@keyframes sunset {
+    0% {
+        transform: rotate(0deg) translateX(-50px) ;
+            }
+            100% {
+                transform: rotate(50deg) translateX(200px) ;
+        
+            }
+}

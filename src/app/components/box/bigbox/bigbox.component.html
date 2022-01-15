@@ -1,4 +1,4 @@
-<div class="container" [ngStyle]="{'background-image': 'url(assets/status/' + pic + '.jpg)'}">
+<div class="container" [ngStyle]="{'background-image': showSmallbox ? 'url(assets/status/' + pic + ')' :'url(assets/status/' + pic + '.jpg)' }">
     
     <div class="firstLabel">
         <app-small-icons [pic]="smallIcon"></app-small-icons>

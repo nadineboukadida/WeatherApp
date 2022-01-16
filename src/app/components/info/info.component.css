@@ -33,22 +33,33 @@
 .TodayInfos {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   height: 100%;
 }
-@media screen and (max-width: 1100px) {
-  .sideInfos {
-    display: none;
-  }
-}
+
 .currentWeather {
-  min-width: 20vw;
+  min-width: 23vw;
   height: 10vh;
   background-color:var(--orange);
   border-radius: 20px;
   position: absolute;
-  top: -13.5vh;
+  top: -25.5vh;
   right: 2vw;
   z-index: 12;
+  padding-top: 10vh;
 }
+
+@media screen and (max-width: 1100px) {
+    .container {
+        flex-wrap: wrap;
+        padding-bottom: 10vh;
+    }
+    
+  }
+  @media screen and (max-width: 800px) {
+    .currentWeather{
+        display: none;
+    }
+    
+  }

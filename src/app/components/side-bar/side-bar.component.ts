@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-menu="waaaaaaaaaaaaa"
+menu="test"
 globe
 
  active1 =""
@@ -17,6 +17,7 @@ globe
   constructor() { 
     this.menu="menu"
     this.globe="globe"
+    console.log("waaaaaaaaa")
   }
  click1() {
    this.active1="active"
@@ -25,6 +26,7 @@ globe
  click2() {
   this.active2="active"
   this.active1=""
+  
 }
   ngOnInit(): void {
   }

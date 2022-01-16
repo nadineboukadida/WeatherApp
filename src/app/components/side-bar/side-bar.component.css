@@ -8,6 +8,8 @@
     flex-direction: column;
     align-items: center;
     z-index: 22;
+    color: white;
+    display: none;
 
 }
 .container-icons {

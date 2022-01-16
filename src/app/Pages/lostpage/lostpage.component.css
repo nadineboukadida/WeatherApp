@@ -1,0 +1,19 @@
+.container {
+    width:calc(90% - 5vw ) ;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20vh;
+    box-sizing: border-box;
+}
+img {
+    width: 70%;
+    height: 70%;
+}
+.title {
+    width: 100%;
+    inline-size: auto;
+    font-size: max(2vw , 25px);
+}

@@ -7,7 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import data from '../states.json';
+import data from '../../states.json';
 
 // amCharts imports
 import * as am5 from '@amcharts/amcharts5';
@@ -15,7 +15,8 @@ import * as am5map from '@amcharts/amcharts5/map';
 import worldLow from '@amcharts/amcharts5-geodata/worldLow';
 
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
-import { WeatherService } from '../services/weather.service';
+import { WeatherService } from '../../services/weather.service';
+import { BarService } from '../../services/bar.service';
 @Component({
   selector: 'app-worldmap',
   templateUrl: './worldmap.component.html',
@@ -33,7 +34,7 @@ export class WorldmapComponent implements OnInit {
   cities: string[];
   private root: am5.Root;
 
-  constructor(@Inject(PLATFORM_ID) private platformId, private zone: NgZone) {
+  constructor(@Inject(PLATFORM_ID) private platformId, private zone: NgZone , private barService:BarService) {
     this.data = JSON.parse(JSON.stringify(data));
   }
 
@@ -47,6 +48,8 @@ export class WorldmapComponent implements OnInit {
   }
 
   ngOnInit() {
+this.barService.chooseGlobe()
+
     let root = am5.Root.new('chartdiv');
     var data;
     root.setThemes([am5themes_Animated.new(root)]);

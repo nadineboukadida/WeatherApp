@@ -1,0 +1,26 @@
+.container {
+width: 100%;
+background-color: var(--darkblue);
+height: 10vh;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 20;
+transition: 0.2s all;
+}
+.container:hover {
+    background-color:#4b678aa4;
+}
+.icon {
+    width: 50%;
+    height: 50%;
+}
+.active {
+    background-color: white;
+}
+.inactive {
+    background-color: var(--darkblue);
+}
+.container:hover {
+    cursor: pointer;
+}

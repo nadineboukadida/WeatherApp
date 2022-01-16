@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  width: max(50px, 5vw);
+  background-color: var(--darkblue);
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 22;
+  color: white;
+}
+app-bar-child {
+  width: 100%;
+}
+.text {
+  font-size: max(1.2vw, 13px);
+  position: absolute;
+  font-family: quicksand;
+  top: 0;
+  font-weight: 100;
+  opacity: 0.04;
+  pointer-events: none;
+}

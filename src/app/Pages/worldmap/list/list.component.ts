@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 @Input() list :any
-@Input() country :string
+@Input() country :string 
 @Input() active: boolean = true;
  lastvalue  
  constructor() { 
@@ -19,10 +19,8 @@ export class ListComponent implements OnInit {
   inactive (){
     this.active=false;
   }
-  class():string {
-    if(this.active)
- return ("open")
-
-return ("close")
+  activate(){
+    this.active=true;
   }
+ 
 }

@@ -1,0 +1,16 @@
+<div class="container " [ngClass]="{open:active , close :!active}">
+  <button [ngClass]="{show: !active , hide : active}" class="btnOpen" (click)="activate()">Open</button>
+
+  <div *ngIf="country != undefined" class="explain">Choose a city below to know its weather..</div>
+  <div *ngIf="country != undefined" class="title">
+    Cities of : {{country}} <div (click)="inactive()" class="xclose">x</div>
+  </div>
+
+  <div class="container-list">
+    <div *ngIf="country == undefined" class="undefined">
+      <div class="wrapper">Please select a country to start</div>
+    </div>
+
+    <app-city-item id="list" *ngFor="let item of list" [city]=item></app-city-item>
+  </div>
+</div>

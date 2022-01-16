@@ -20,10 +20,13 @@ import { ChartDailyComponent } from './components/chart-daily/chart-daily.compon
 import { HttpClientModule } from '@angular/common/http';
 import { SunsetSunriseComponent } from './components/sunset-sunrise/sunset-sunrise.component';
 import { SSinfoComponent } from './components/sunset-sunrise/ssinfo/ssinfo.component';
-import { WorldmapComponent } from './worldmap/worldmap.component';
-import { ListComponent } from './worldmap/list/list.component';
-import { CityItemComponent } from './worldmap/list/city-item/city-item.component';
-import { LostpageComponent } from './lostpage/lostpage.component';
+import { WorldmapComponent } from './Pages/worldmap/worldmap.component';
+
+import { ListComponent } from './Pages/worldmap/list/list.component';
+import { CityItemComponent } from './Pages/worldmap/list/city-item/city-item.component';
+import { LostpageComponent } from './Pages/lostpage/lostpage.component';
+import { BarParentComponent } from './bar/bar-parent/bar-parent.component';
+import { BarChildComponent } from './bar/bar-child/bar-child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +50,8 @@ import { LostpageComponent } from './lostpage/lostpage.component';
     ListComponent,
     CityItemComponent,
     LostpageComponent,
+    BarParentComponent,
+    BarChildComponent,
   ],
   imports: [
     BrowserModule,

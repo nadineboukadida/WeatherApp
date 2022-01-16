@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { BarService } from 'src/app/services/bar.service';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -15,14 +16,12 @@ code : string ;
 img : string ; 
 
   constructor(private weatherService : WeatherService ,
-    private route: ActivatedRoute,) { }
+    private route: ActivatedRoute,private barService:BarService , private router : Router) { }
 
   ngOnInit(): void {
 this.name = this.route.snapshot.paramMap.get('name');
   this.getCity(this.name);
-
-
-
+this.barService.chooseMenu()
   }
 
   getCity(city) {
@@ -46,6 +45,10 @@ else if (this.code == "13d" || this.code == "13n"){
   this.img="13.gif"
 }
   }}
-      )
+     ,(err)=> {
+ if (err.statusText == "Not Found"){
+   this.router.navigate(["**"])
+ }
+     } )
   }
 }

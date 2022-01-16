@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { InfoComponent } from './components/info/info.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { IconComponent } from './components/icon/icon.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { BigboxComponent } from './components/box/bigbox/bigbox.component';
 import { SmallboxComponent } from './components/box/smallbox/smallbox.component';
 import { SmallIconsComponent } from './components/box/small-icons/small-icons.component';

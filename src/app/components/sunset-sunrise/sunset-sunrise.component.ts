@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CurrentWeatherService } from 'src/app/services/current-weather.service';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({

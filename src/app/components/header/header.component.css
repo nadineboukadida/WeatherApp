@@ -1,69 +1,79 @@
 .container {
-    width: 100%;
-    height: max(12vh , 90px)  ; 
-    position: fixed;
-    top: 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-    /* justify-content: center; */
-    /* padding-left: ; */
-    z-index: 9;
+  width: 100%;
+  height: max(12vh, 90px);
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: rgba(51, 58, 112, 0.11);
+  padding: 10px;
+  /* justify-content: center; */
+  /* padding-left: ; */
+  z-index: 9;
 }
 .profile-img {
-    width: 45%;
-    min-width: 70px;
+  width: 45%;
+  min-width: 70px;
 }
 .container-msg {
-    width: 50%;
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
+  width: 40%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 .text {
-    /* width: 100%; */
+  /* width: 100%; */
 }
 .profile {
-    /* width: 70%; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* width: 70%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .name {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 .searchBar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color:#f9f9f9d4 ;
 }
 input {
-    background-color: transparent;
-    border: transparent;
-    border-bottom: 1px solid black;
-    padding: 2px;
-    width: max(13vw , 100px);
-    font-size: max(1vw ,16px);
+  background-color: transparent;
+  border: transparent;
+  padding: 5px;
+  color: gray;
+  font-family: quicksand;
+  letter-spacing: 1.5px;
+  width: max(13vw, 100px);
+  font-size: max(0.3vw, 12px);
 }
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
 
 .search {
-    width: 2vw;
-    min-width: 20px;
+  width: 2vw;
+  min-width: 20px;
+}
+.search:hover {
+  cursor: pointer;
 }
 
-
-
-@media screen and (max-width : 800px) {
-    .container-msg {
+@media screen and (max-width: 800px) {
+  .container-msg {
     width: 100%;
 
-       justify-content: flex-start;}
-    
+    justify-content: flex-start;
+  }
+}
+button {
+  border: transparent;
+  outline: transparent;
+  background-color: transparent;
 }

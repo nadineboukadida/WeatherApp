@@ -1,3 +1,10 @@
-<div [ngClass]="{close: !active}" class="container open">
-<div class="title">Cities of : {{country}}</div>
+<div [ngClass]="class()" class="container ">
+  <div class="explain">Choose a city below to know its weather..</div>
+  <div class="title">
+    Cities of : {{country}}
+  </div>
+
+  <div class="container-list">
+    <app-city-item id="list" *ngFor="let item of list" [city]=item></app-city-item>
+  </div>
 </div>

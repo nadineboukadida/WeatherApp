@@ -6,12 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./icon.component.css']
 })
 export class IconComponent implements OnInit {
-@Input() width:number
-@Input() item:string
-
+@Input()pic:string
+@Input() active:string =""
+url :string
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

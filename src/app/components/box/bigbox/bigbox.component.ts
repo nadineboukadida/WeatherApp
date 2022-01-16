@@ -13,11 +13,11 @@ export class BigboxComponent implements OnInit {
   @Input() subtitle: string = '';
   @Input() showSmallbox: boolean;
   @Input() weather: any;
-  speed: number;
-  status: string;
-  class: string;
-  @Input() img : string ;
-  code : string;
+  speed: number = 0;
+  status: string ="wind status";
+  class: string = "";
+  @Input() img : string ="" ;
+  code : string= "";
   constructor(private weatherService : WeatherService) {}
 
   ngOnInit(): void {
@@ -41,5 +41,6 @@ export class BigboxComponent implements OnInit {
       this.status = 'Storm Force';
       this.class = 'status5';
     }
+    console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeee",this.status)
   }
 }

@@ -10,11 +10,16 @@
   box-sizing: border-box;
   border-radius: 30px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 1s all;
+}
+.container:hover {
+  cursor: pointer;
+  background-color: rgba(86, 139, 182, 0.377);
 }
 .number {
   font-size: max(1vw, 15px);
   font-weight: 700;
-  color: rgb(235, 162, 128);
+  color: var(--orange);
   font-family: "Montserrat", sans-serif;
   margin-bottom: 7px;
   width: 80%;
@@ -22,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 .weather {
   font-size: max(1.2vw, 18px);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class HeaderComponent implements OnInit {
 search  : string =""
 name=""
-  constructor(private weatherService : WeatherService) { }
+  constructor(private weatherService : WeatherService,private router : Router) { }
 
   ngOnInit(): void {
     if(this.weatherService.weather)
@@ -19,5 +20,9 @@ name=""
   onKey(event:any) {
    this.search=event.target.value;
   }
-  
+  submit (value){
+    this.router.navigate(['info', value]).then(() => {
+      window.location.reload();
+    });;
+  }
 }

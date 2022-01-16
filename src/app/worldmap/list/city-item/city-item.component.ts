@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-city-item',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./city-item.component.css']
 })
 export class CityItemComponent implements OnInit {
-
-  constructor() { }
+@Input() city
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+  goto(value) {
+    console.log("fired")
+    this.router.navigate(['info', value]);
   }
 
 }

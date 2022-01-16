@@ -10,7 +10,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class SideinfosComponent implements OnInit {
   weather: any;
-  name: string;
+  name: string ="";
   @Input() show = true;
   constructor(
     private weatherService: WeatherService,
@@ -20,7 +20,8 @@ export class SideinfosComponent implements OnInit {
       .getWeatherDatabyName(this.route.snapshot.paramMap.get('name'))
       .subscribe((e) => {
         this.weather = e;
-      });
+      },
+      (err)=> {console.log("error in sidebar")});
   }
 
   ngOnInit(): void {}

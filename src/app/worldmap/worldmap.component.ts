@@ -7,7 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import data from '../countries.json';
+import data from '../states.json';
 
 // amCharts imports
 import * as am5 from '@amcharts/amcharts5';
@@ -26,18 +26,15 @@ export class WorldmapComponent implements OnInit {
   lon: any;
   weather: any;
   map: any;
-
+  data;
   country;
   countries;
+  active
   cities: string[];
   private root: am5.Root;
 
   constructor(@Inject(PLATFORM_ID) private platformId, private zone: NgZone) {
-    this.countries = JSON.parse(JSON.stringify(data));
-  }
-
-  getCountryCities(country: string) {
-    this.cities = this.countries[country];
+    this.data = JSON.parse(JSON.stringify(data));
   }
 
   // Run the function only in the browser
@@ -102,16 +99,16 @@ export class WorldmapComponent implements OnInit {
           } else {
             chart.goHome();
           }
-          
-          data=target.dataItem.dataContext.name
+
+          data = target.dataItem.dataContext.name;
           previousPolygon = target;
         }
       );
-      window.addEventListener("click", ()=> {
+      window.addEventListener('click', () => {
         this.changevalue(data);
+        console.log("waaaa")
+      });
 
-      })
-    
       // Add zoom control
       // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
       chart.set('zoomControl', am5map.ZoomControl.new(root, {}));
@@ -125,7 +122,14 @@ export class WorldmapComponent implements OnInit {
       chart.appear(1000, 100);
     });
   }
+  
   changevalue(value) {
-    this.country=value
-   }
+    this.active=true;
+    this.country = value;
+    this.getCountryCities(value);
+  }
+  getCountryCities(country: string) {
+    this.countries = this.data.filter((e) => e.country == country && e.name.split(" ").length ==1 );
+    console.log(this.countries)
+  }
 }

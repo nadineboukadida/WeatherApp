@@ -23,6 +23,7 @@ import { SSinfoComponent } from './components/sunset-sunrise/ssinfo/ssinfo.compo
 import { WorldmapComponent } from './worldmap/worldmap.component';
 import { ListComponent } from './worldmap/list/list.component';
 import { CityItemComponent } from './worldmap/list/city-item/city-item.component';
+import { LostpageComponent } from './lostpage/lostpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { CityItemComponent } from './worldmap/list/city-item/city-item.component
     WorldmapComponent,
     ListComponent,
     CityItemComponent,
+    LostpageComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { WeatherService } from 'src/app/services/weather.service';
   styleUrls: ['./sunset-sunrise.component.css'],
 })
 export class SunsetSunriseComponent implements OnInit {
-  data: any;
+  data: any ;
   constructor(
     private weatherService: WeatherService,
     private route: ActivatedRoute

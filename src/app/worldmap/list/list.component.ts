@@ -8,11 +8,21 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 @Input() list :any
 @Input() country :string
-active= true;
-  constructor() { }
-
-  ngOnInit(): void {
+@Input() active: boolean = true;
+ lastvalue  
+ constructor() { 
 
   }
 
+  ngOnInit(): void {
+  }
+  inactive (){
+    this.active=false;
+  }
+  class():string {
+    if(this.active)
+ return ("open")
+
+return ("close")
+  }
 }

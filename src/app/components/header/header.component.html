@@ -9,9 +9,10 @@
     </div>
   </div>
   <div class="searchBar">
-    <img class="search" src="assets/svg/search.svg" alt="">
-    <input type="text" (keyup)="onKey($event)">
-
+      
+    <input type="text" #userInput placeholder="Search anything .." (keyup)="onKey($event)">
+   
+    <button type="submit" (keyup.enter)="submit(userInput.value)" (click)="submit(userInput.value)"> <img class="search" src="assets/svg/search.svg" alt=""></button>
   </div>
   <div class="currentWeather">
     <app-sideinfos [show]=false></app-sideinfos>
